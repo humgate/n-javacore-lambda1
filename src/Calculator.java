@@ -25,8 +25,8 @@ public class Calculator {
 
     BinaryOperator<Integer> multiply = (x, y) -> x * y;
 
-    //если делитель равен 0, то возвращаем 0 иначе будет падать с эксепшоном деления на ноль
-    BinaryOperator<Integer> divide = (x, y) -> y != 0 ? x / y : 0;
+    //если делитель равен 0, то возвращаем Integer.MAX_VALUE иначе будет падать с эксепшоном деления на ноль
+    BinaryOperator<Integer> divide = (x, y) -> y != 0 ? x / y : Integer.MAX_VALUE;
 
     UnaryOperator<Integer> pow = x -> x * x;
 
